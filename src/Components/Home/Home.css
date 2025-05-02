@@ -1,0 +1,126 @@
+body{
+    margin: 0;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f2f5; ;
+}
+.navbar{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    background: transparent;
+    transition: background-color 0.3s ease;
+    z-index: 1000;
+    box-sizing: border-box;
+}
+.logo{
+    font-size: 24px;
+    font-weight: bold; 
+    color: #263d98;
+}
+.links{
+    display: flex;
+    gap: 25px;
+    flex-wrap: wrap; 
+    justify-content: flex-end; 
+    margin-left: auto;
+}
+.links p{
+    color: #4b76e1; 
+    font-weight: 500;
+    cursor: pointer;
+    transition: color 0.3s;
+    padding: 5px 10px;
+    white-space: nowrap;
+}
+.links p:hover{
+    color: #1e40af;
+}
+.links .contact, .links .faq, .links .login{
+    background-color: #007bff; 
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+.links .contact:hover, .links .faq:hover, .links .login:hover{
+    background-color: #0056b3; 
+
+}
+.hero{
+    display: flex; 
+    align-items: center;
+    padding: 120px 40px 80px;
+    background: #ffffff;
+    gap: 50px;
+}
+.description{
+    flex: 1;
+}
+.description h2{
+    font-size: 42px; 
+    color: #2d3748; 
+    margin-bottom: 20px;
+}
+.description p{
+    font-size: 18px; 
+    color: #4a5568; 
+    margin-bottom: 30px;
+}
+.button{
+    padding: 12px 35px; 
+    font-size: 18px;
+    background: #4b76e1; 
+    color: #fff; 
+    border: none; 
+    border-radius: 5px;
+    cursor: pointer; 
+    transition: background-color 0.3s;
+}
+.button:hover{
+    background: #2b4c91;
+}
+.hero-image{
+    flex: 1;
+    display: flex; 
+    justify-content: center;
+}
+.hero-image img{
+    max-width: 100%; 
+    height: auto; 
+    border-radius: 10px;
+}
+.hero-features{
+    display: flex; 
+    justify-content: space-around;
+    padding: 60px 40px; 
+    background: #edf2f7;
+    gap: 30px;
+}
+.card{
+    background: #fff; 
+    padding: 25px; 
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); 
+    text-align: center;
+    flex: 1;
+}
+.card h3{
+    font-size: 22px; 
+    color: #2d3748; 
+    margin-bottom: 15px;
+}
+.card p{
+    font-size: 16px; 
+    color: #4a5568;
+}
+.footer{
+    text-align: center; 
+    padding: 20px; 
+    background: #2d3748; 
+    color: #fff;
+}
