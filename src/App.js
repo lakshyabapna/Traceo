@@ -6,10 +6,12 @@ import Dashboard from './Components/Dashboard/Dashboard'
 import Contact from './Components/Contact/Contact';
 import FAQ from './Components/FAQ/FAQ';
 import Profile from './Components/Profile/Profile';
+import Layout from './Components/CommonLayout/CommonLayout';
 function App() {
   return (
     <div className="App">
       <Router>
+        <Layout>
         <Routes>
           <Route path='/' element={<Home/>}/>
           <Route path='/login' element={<Login/>}/>
@@ -18,6 +20,7 @@ function App() {
           <Route path='/faq' element={<FAQ/>}/>
           <Route path='/profile' element={<Profile/>}/>
         </Routes>
+        </Layout>
       </Router>
     </div>
   );
