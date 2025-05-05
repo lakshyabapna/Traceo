@@ -1,69 +1,92 @@
+.faq-container{
+    flex: 1;
+}
 .faq{
     display: flex;
     justify-content: space-between;
+    align-items: flex-start;
     gap: 40px;
-    padding: 40px;
+    padding: 60px 40px;
+    background-color: #f9fafb;
     flex-wrap: wrap;
 }
 .faq-left{
-    flex: 1 1 400px;
+    flex: 1 1 500px;
     max-width: 600px;
 }
 .faq-right{
-    flex: 1 1 300px;
+    flex: 1 1 350px;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 30px;
+    padding-top: 20px;
 }
 .faq-right img{
     width: 100%;
-    max-width: 350px;
-    border-radius: 10px;
+    max-width: 500px;
+    height: auto;
+    border-radius: 12px;
+    object-fit: contain
 }
-h2{
-    font-size: 32px;
+.faq h2{
+    font-size: 36px;
+    font-weight: 700;
     margin-bottom: 10px;
-    color: #2d3748;
+    color: #063c75;
 }
 .description{
     font-size: 18px;
-    color: #4a5568;
+    color: #0b3274;
     margin-bottom: 30px;
 }
 .data{
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 15px;
 }
 .item{
     background: #ffffff;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    transition: transform 0.2s ease;
     overflow: hidden;
+}
+.item:hover{
+    transform: translate(-2px);
 }
 .question{
     display: flex;
     justify-content: space-between;
     padding: 18px 20px;
     cursor: pointer;
-    font-size: 18px;
-    color: #1e40af;
+    font-size: 17px;
+    color: #2b6cb0;
     font-weight: 600;
 }
 .faq-toggle{
-    font-size: 24px;
-    line-height: 1;
-    color: #1e40af;
+    font-size: 22px;
+    font-weight: bold;
+    margin-left: 10px;
+    color: #2b6cb0;
 }
 .faq-answer{
     padding: 15px 20px;
     font-size: 16px;
-    color: #4a5568;
+    line-height: 1.6;
+    color: #6186c7;
+    background-color: #f1f5f9;
     border-top: 1px solid #e2e8f0;
 }
+.faq-mid{
+    margin-top: 30px;
+    font-size: 16px;
+    color: #2d3748;
+}
 .faq-mid a{
-    color: #4b76e1;
+    color: #3182ce;
     text-decoration: none;
     font-weight: 600;
+}
+.faq-mid a:hover{
+    text-decoration: underline;
 }

@@ -4,13 +4,13 @@ import Footer from "../Footer/Footer";
 
 const CommonLayout = ({ children }) => {
   return (
-    <>
+    <div className="layout">
       <Navbar />
-      <main style={{ minHeight: "80vh" }}>
+      <main className="main">
         {children}
       </main>
       <Footer />
-    </>
+    </div>
   );
 };
 
