@@ -2,6 +2,8 @@ import React, { useEffect } from 'react';
 import logo from '../../Assets/Logo.png'
 import { Link } from 'react-router-dom';
 import './Navbar.css'
+import AuthButtons from '../authbutton';
+
 const Navbar = () => {
   useEffect(() => {
     const handleScroll = () => {
@@ -17,19 +19,20 @@ const Navbar = () => {
   }, []);
 
   return (
-    <header className='navbar'>
-      <div className='logo'>
-        <img src={logo} alt='Logo Illustration'/>
-      </div>
-      <nav className='links'>
-        <Link to='/'>Home</Link>
-        <Link to='/dashboard'>Dashboard</Link>
-        <Link to='/contact' className='contact'>Contact</Link>
-        <Link to='/faq' className='faq'>FAQ</Link>
-        <Link to='/login' className='login'>Login</Link>
-        <Link to='/profile'>Profile</Link>
-      </nav>
-    </header>
+<div style={{display: "flex", alignItems:"center", justifyContent: "space-between"}}>
+        <div className='logo'>
+          <img src={logo} alt='Logo Illustration'/>
+        </div>
+        <nav className='links'>
+          <Link to='/'>Home</Link>
+          <Link to='/dashboard'>Dashboard</Link>
+          <Link to='/contact' className='contact'>Contact</Link>
+          <Link to='/faq' className='faq'>FAQ</Link>
+          <Link href='/login' className='login'>Login</Link>
+        </nav>
+        <AuthButtons />
+        </div>
+        
   );
 };
 
