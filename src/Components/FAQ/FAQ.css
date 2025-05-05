@@ -15,6 +15,7 @@
     max-width: 600px;
 }
 .faq-right{
+    margin-top: 20px;
     flex: 1 1 350px;
     display: flex;
     justify-content: center;
@@ -23,7 +24,7 @@
 }
 .faq-right img{
     width: 100%;
-    max-width: 500px;
+    max-width: 550px;
     height: auto;
     border-radius: 12px;
     object-fit: contain
@@ -38,8 +39,10 @@
     font-size: 18px;
     color: #0b3274;
     margin-bottom: 30px;
+    margin-top: 30px;
 }
 .data{
+    margin-top: 40px;
     display: flex;
     flex-direction: column;
     gap: 15px;
@@ -78,7 +81,7 @@
     border-top: 1px solid #e2e8f0;
 }
 .faq-mid{
-    margin-top: 30px;
+    margin-top: 40px;
     font-size: 16px;
     color: #2d3748;
 }

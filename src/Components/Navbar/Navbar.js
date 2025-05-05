@@ -1,5 +1,7 @@
 import React, { useEffect } from 'react';
+import logo from '../../Assets/Logo.png'
 import { Link } from 'react-router-dom';
+import './Navbar.css'
 const Navbar = () => {
   useEffect(() => {
     const handleScroll = () => {
@@ -16,7 +18,9 @@ const Navbar = () => {
 
   return (
     <header className='navbar'>
-      <div className='logo'>Traceo</div>
+      <div className='logo'>
+        <img src={logo} alt='Logo Illustration'/>
+      </div>
       <nav className='links'>
         <Link to='/'>Home</Link>
         <Link to='/dashboard'>Dashboard</Link>
