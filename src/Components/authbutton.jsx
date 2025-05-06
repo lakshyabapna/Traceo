@@ -1,20 +1,21 @@
 import { SignedIn, SignedOut, SignInButton, SignUpButton, UserButton } from '@clerk/clerk-react';
+import './authbutton.css'
 
 export default function AuthButtons() {
   return (
-    <div className='z-11 mr-10 mt-auto mb-auto'>
-      <SignedIn className = 'z-11 mr-20'>
+    <div className='auth'>
+      <SignedIn className = 'signedin'>
         <UserButton afterSignOutUrl="/"/>
       </SignedIn>
 
-      <SignedOut>
+      <SignedOut className = 'signedout'>
         <SignInButton mode="modal">
-          <button className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded mr-5 cursor-pointer">
+          <button className = 'signin-btn'>
             Login
           </button>
         </SignInButton>
         <SignUpButton mode="modal">
-          <button className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded cursor-pointer">
+          <button className = 'signup-btn'>
             Sign Up
           </button>
         </SignUpButton>

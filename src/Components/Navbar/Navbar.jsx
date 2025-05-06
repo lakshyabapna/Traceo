@@ -19,19 +19,20 @@ const Navbar = () => {
   }, []);
 
   return (
-<div style={{display: "flex", alignItems:"center", justifyContent: "space-between"}}>
-        <div className='logo'>
-          <img src={logo} alt='Logo Illustration'/>
+      <div className='navbar'>
+        <div className='logo'>/
+          <img src={logo} alt='Logo Illustration' className='img'/>
         </div>
         <nav className='links'>
           <Link to='/'>Home</Link>
           <Link to='/dashboard'>Dashboard</Link>
           <Link to='/contact' className='contact'>Contact</Link>
           <Link to='/faq' className='faq'>FAQ</Link>
-          <Link href='/login' className='login'>Login</Link>
         </nav>
-        <AuthButtons />
+        <div className='authbutton'>
+          <AuthButtons />
         </div>
+      </div>
         
   );
 };
