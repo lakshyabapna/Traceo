@@ -1,9 +1,11 @@
 import React from 'react'
+import myImage from '../../Utils/Myimage'
 
 const Dashboard = () => {
+  
   return (
     <div>
-      Dashboard
+      
     </div>
   )
 }
