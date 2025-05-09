@@ -35,19 +35,21 @@ const Dashboard = () => {
     }
   return (
     <div className='dashboard'>
-      <h1>Get Your Order Status Here</h1>
-      <form className='form' onSubmit = {handleSubmit}>
-        <label>
-          Enter Order Number:
-            <input type='text' value={orderNumber} onChange={(e)=>setOrderNumber(e.target.value)}/>
-        </label>
-        <button type='submit'>Search</button>
+      <h1 className='myh1'>Get Your Order Status Here</h1>
+      <form className='myform' onSubmit = {handleSubmit}>
+        <div className='myfrm-grp'>
+          <label>
+            Enter Order Number:
+              <input type='text' value={orderNumber} onChange={(e)=>setOrderNumber(e.target.value)}/>
+          </label>
+          <button type='submit'>Search</button>
+        </div>
       </form>
-      {loading && <p>Loading orders...</p>}
+      {loading && <p className='error'>Loading orders...</p>}
       {error && <p>{error}</p>}
       {yourOrder && (
-        <div>
-          <h2>Order Details</h2>
+        <div className='ord-dts'>
+          <h2 className='myh2'>Order Details</h2>
           <p><strong>Order Number:</strong>
             {yourOrder.orderNumber}
           </p>
@@ -57,21 +59,21 @@ const Dashboard = () => {
           <p><strong>Status:</strong>
             {yourOrder.status}
           </p>
-          <p className="status-message">
-            {yourOrder.status === "Processing" && "🛠️ We are preparing your order."}
-            {yourOrder.status === "Shipped" && "📦 Your order has been shipped and is on the way."}
-            {yourOrder.status === "Out for Delivery" && "🚚 Your order is out for delivery!"}
-            {yourOrder.status === "Delivered" && "🎉 Your order has been delivered. Enjoy!"}
-            {yourOrder.status === "Cancelled" && "❌ Your order was cancelled."}
-          </p>
+          <div className="status">
+            {yourOrder.status === "processing" && <p>🛠️ We are preparing your order.</p>}
+            {yourOrder.status === "shipped" && <p>📦 Your order has been shipped and is on the way.</p>}
+            {yourOrder.status === "out-for-delivery" && <p>🚚 Your order is out for delivery!</p>}
+            {yourOrder.status === "delivered" && <p>🎉 Your order has been delivered. Enjoy!</p>}
+            {yourOrder.status === "delayed" && <p>⏳ Your order has been delayed.</p>}
+          </div>
           <p><strong>Total:</strong>
             ${yourOrder.total}
           </p>
           <p><strong>Estimated Delivery:</strong>
             {yourOrder.estimatedDelivery}
           </p>
-          <h3>Items:</h3>
-          <ul>
+          <h3 className='myh3'>Items:</h3>
+          <ul className='item'>
             {yourOrder.items.map((item)=>(
               <li key = {item.id} style = {{display:'flex', alignItems:'center',gap:'1rem',marginBottom: '1rem'}}>
                 <img src={myImage[item.name]} alt = {item.name} style = {{width:'60px', height:'60px', objectFit:'cover'}}/>
@@ -84,10 +86,10 @@ const Dashboard = () => {
             ))}
           </ul>
           <h3>Order Timeline:</h3>
-          <ul>
+          <ul className='timeline'>
             {yourOrder.timeline.map((e,i)=>(
               <li key={i}>
-                <span/>
+                <span className='dot'/>
                 <span>{e.status} - <strong>{e.date}</strong></span>
               </li>
             ))}
