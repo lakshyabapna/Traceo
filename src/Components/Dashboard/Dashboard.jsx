@@ -1,7 +1,10 @@
 import React,{useState,useEffect} from 'react'
 import myImage from '../../Utils/Myimage'
 import './Dashboard.css'
+import { useUser } from '@clerk/clerk-react'
 const Dashboard = () => {
+    const {user} = useUser()
+    const userEmail = user?.primaryEmailAddress?.emailAddress
     const [orderNumber,setOrderNumber] = useState('');
     const [orders,setOrders] = useState([]);
     const [yourOrder,setYourOrder] = useState(null);
@@ -13,7 +16,12 @@ const Dashboard = () => {
         try {
           const response = await fetch('https://dummyjson.com/c/83f3-5841-462d-9cb4');
           const data = await response.json();
-          setOrders(data.orders || [])
+          const ordersWithFakeEmails = (data.orders || []).map((order, index) => ({
+            ...order,
+            email: index % 2 === (userEmail?.length%2)? userEmail: 'otheruser@example.com',
+          }));
+          const userOrders = ordersWithFakeEmails.filter(order => order.email === userEmail);
+          setOrders(userOrders)
         } catch {
           setError('Cannot Fetch your Orders')
         } finally {
@@ -21,7 +29,7 @@ const Dashboard = () => {
         }
       };
       fetchOrders()
-    },[])
+    },[userEmail])
     const handleSubmit = (e) => {
       e.preventDefault();
       const order = orders.find((ord)=> ord.orderNumber === orderNumber);
