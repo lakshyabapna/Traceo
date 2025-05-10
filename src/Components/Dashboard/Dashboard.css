@@ -1,6 +1,6 @@
-.dashboard{
+.dashboard {
     background: #fefefe;
-    box-shadow: 0 0 15px rgba(0,0,0,0.08);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.08);
     border-radius: 12px;
     font-family: 'Segoe UI', sans-serif;
     padding: 2rem;
@@ -8,7 +8,9 @@
     max-width: 800px;
     margin-top: 90px;
 }
-.myh1,.myh2,.myh3{
+.myh1,
+.myh2,
+.myh3 {
     text-align: center;
     color: #2c3e50;
 }
@@ -18,19 +20,19 @@
     align-items: center;
     margin-bottom: 2rem;
 }
-.myform label{
+.myform label {
     font-weight: 500;
     margin-bottom: 0.5rem;
     color: #333;
 }
-.myfrm-grp{
+.myfrm-grp {
     display: flex;
     gap: 0.5rem;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
 }
-.myform input{
+.myform input {
     padding: 0.5rem;
     margin-left: 0.5rem;
     margin-top: 0.5rem;
@@ -53,41 +55,66 @@
 .myform button:hover {
     background-color: #0059c1;
 }
-.myform input:focus,
-.myform button:focus {
-    outline: 2px solid #0077ff;
-    outline-offset: 2px;
-    box-shadow: 0 0 5px rgba(0, 119, 255, 0.5);
-    transition: box-shadow 0.2s ease;
-}
-.error{
+.error {
     color: red;
     text-align: center;
     margin-bottom: 1rem;
 }
-.ord-dts{
+.ord-dts {
     background-color: #f9fbff;
     padding: 1rem 2rem;
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.05);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
 }
-.status{
-    background-color: #e6f0ff;
+.status-badge {
+    display: inline-block;
+    padding: 0.4rem 0.8rem;
+    border-radius: 1rem;
+    font-weight: 600;
+    font-size: 0.95rem;
     margin: 1rem 0;
-    border-radius: 6px;
+    color: white;
+    text-align: center;
+    width: fit-content;
+    margin-bottom: 0.5rem;
+}
+.status-badge.processing {
+    background-color: #f39c12;
+}
+.status-badge.delayed {
+    background-color: #e67e22
+}
+
+.cancel-btn {
+    background-color: #e74c3c;
+    color: white;
+    padding: 0.4rem 1rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
     font-weight: 500;
-    color: #333;
-    border-left: 4px solid #0077ff;
-    padding: 0.5rem 1rem;
+    margin-top: 1rem;
 }
-.status p {
-  margin: 0.5rem 0;
+.cancel-btn:hover {
+    background-color: #c0392b;
 }
-.item{
+.status-badge.cancelled {
+    background-color: #7f8c8d;
+}
+.status-badge.shipped {
+    background-color: #2980b9;
+}
+.status-badge.out-for-delivery {
+    background-color: #16a085;
+}
+.status-badge.delivered {
+    background-color: #27ae60;
+}
+.item {
     list-style: none;
     padding: 0;
 }
-.item li{
+.item li {
     display: flex;
     gap: 1rem;
     align-items: center;
@@ -97,19 +124,19 @@
     padding: 1rem;
     margin-bottom: 1rem;
 }
-.item img{
+.item img {
     width: 60px;
     height: 60px;
     object-fit: cover;
     border-radius: 8px;
 }
-.timeline{
+.timeline {
     list-style: none;
     padding-left: 0;
     position: relative;
     margin-top: 1rem;
 }
-.timeline li{
+.timeline li {
     display: flex;
     align-items: center;
     gap: 0.5rem;
@@ -117,11 +144,48 @@
     position: relative;
     padding-left: 20px;
 }
-.timeline .dot{
+.timeline .dot {
     width: 10px;
     height: 10px;
     background-color: #0077ff;
     border-radius: 50%;
     position: absolute;
     left: 0;
+}
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+.modal-content {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 10px;
+    text-align: center;
+    width: 300px;
+}
+.modal button {
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 8px;
+    margin-top: 1rem;
+    cursor: pointer;
+}
+.modal button:first-child {
+    background-color: #e74c3c;
+}
+.modal button:first-child:hover {
+    background-color: #c0392b;
+}
+.modal button:last-child {
+    background-color: #2ecc71;
+}
+.modal button:last-child:hover {
+    background-color: #27ae60;
 }
