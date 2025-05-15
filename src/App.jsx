@@ -7,7 +7,7 @@ import Contact from './Components/Contact/Contact';
 import FAQ from './Components/FAQ/FAQ';
 import Profile from './Components/Profile/Profile';
 import Layout from './Components/CommonLayout/CommonLayout';
-
+import OrderDetails from './Components/OrderDetails/OrderDetails';
 function ProtectedPage({ children }) {
   return (
     <>
@@ -18,8 +18,6 @@ function ProtectedPage({ children }) {
     </>
   );
 }
-
-
 function App() {
   return (
     <BrowserRouter>
@@ -33,6 +31,14 @@ function App() {
             element={
               <ProtectedPage>
                 <Dashboard />
+              </ProtectedPage>
+            }
+          />
+          <Route
+            path="/order/:orderId"
+            element={
+              <ProtectedPage>
+                <OrderDetails />
               </ProtectedPage>
             }
           />
