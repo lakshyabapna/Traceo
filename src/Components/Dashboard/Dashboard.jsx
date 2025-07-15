@@ -100,9 +100,9 @@ const Dashboard = () => {
                 onClick={() => setYourOrder(order)}
                 style={{ cursor: 'pointer' }}
               >
-                <span>Order Number: {order.orderNumber}</span>
-                <span>Status: {order.status}</span>
-                <span>Total: ${order.total}</span>
+                <span><strong>Order Number:</strong> {order.orderNumber}</span>
+                <span className={`status-line ${order.status}`}><strong>Status:</strong> {order.status.charAt(0).toUpperCase() + order.status.slice(1)}</span>
+                <span><strong>Total:</strong> ${order.total}</span>
               </li>
             ))}
           </ul>

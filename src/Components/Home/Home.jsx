@@ -4,6 +4,7 @@ import './Home.css'
 import realtimeIcon from '../../Assets/realtimeIcon.png'
 import accessIcon from '../../Assets/accessIcon.png'
 import secureIcon from '../../Assets/secureIcon.png'
+import {Link} from 'react-router-dom'
 const Home = () => {  
     return (
         <div className='Home'>
@@ -11,7 +12,9 @@ const Home = () => {
                 <div className='description'>
                     <h2>Track your Orders Instantly!</h2>
                     <p>Get real-time updates on your orders from dispatch to doorstep.</p>
-                    <button className='button'>Start Tracking</button>
+                    <Link to="/dashboard">
+                        <button className='button'>Start Tracking</button>
+                    </Link>
                 </div>
                 <div className='hero-image'>
                     <img src={heroImage} alt='Workplace with Traceo interface' />
