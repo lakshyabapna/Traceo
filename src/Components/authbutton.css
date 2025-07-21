@@ -1,8 +1,9 @@
 .auth{
     display: flex;
-    gap: 20px;
-    padding-left: 20px;
+    gap: 15px;
+    align-items: center;
 }
+
 .signin-btn{
     background-color: #007bff;
     color: white;
@@ -13,6 +14,11 @@
     border: none;
     cursor: pointer;
 }
+
+.signin-btn:hover {
+    background-color: #0056b3;
+}
+
 .signup-btn{
     background-color: #007bff;
     color: white;
@@ -22,4 +28,72 @@
     transition: background-color 0.3s ease;
     border: none;
     cursor: pointer;
+}
+
+.signup-btn:hover {
+    background-color: #0056b3;
+}
+
+@media (max-width: 768px) {
+    .mobile-auth .auth {
+        flex-direction: column;
+        gap: 15px;
+        width: 100%;
+        padding: 0;
+    }
+
+    .mobile-auth .signin-btn,
+    .mobile-auth .signup-btn {
+        width: 100%;
+        padding: 12px 20px;
+        font-size: 16px;
+        text-align: center;
+    }
+
+    .desktop-auth .auth {
+        gap: 10px;
+    }
+
+    .desktop-auth .signin-btn,
+    .desktop-auth .signup-btn {
+        padding: 8px 15px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .mobile-auth .signin-btn,
+    .mobile-auth .signup-btn {
+        padding: 10px 15px;
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 768px) {
+    .auth {
+        gap: 15px;
+        padding-left: 15px;
+    }
+
+    .signin-btn,
+    .signup-btn {
+        padding: 8px 20px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .auth {
+        gap: 10px;
+        padding-left: 10px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .signin-btn,
+    .signup-btn {
+        padding: 6px 15px;
+        font-size: 13px;
+        min-width: 80px;
+    }
 }

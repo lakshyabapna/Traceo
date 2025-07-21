@@ -4,7 +4,7 @@ body{
     background-color: #f0f2f5; ;
 }
 .hero{
-    display: flex; 
+    display: flex;
     align-items: center;
     padding: 120px 40px 80px;
     background: #ffffff;
@@ -14,23 +14,23 @@ body{
     flex: 1;
 }
 .description h2{
-    font-size: 42px; 
-    color: #063c75; 
+    font-size: 42px;
+    color: #063c75;
     margin-bottom: 20px;
 }
 .description p{
-    font-size: 18px; 
-    color: #0b3274; 
+    font-size: 18px;
+    color: #0b3274;
     margin-bottom: 30px;
 }
 .button{
-    padding: 12px 35px; 
+    padding: 12px 35px;
     font-size: 18px;
-    background: #4b76e1; 
-    color: #fff; 
-    border: none; 
+    background: #4b76e1;
+    color: #fff;
+    border: none;
     border-radius: 5px;
-    cursor: pointer; 
+    cursor: pointer;
     transition: background-color 0.3s;
 }
 .button:hover{
@@ -38,42 +38,42 @@ body{
 }
 .hero-image{
     flex: 1;
-    display: flex; 
+    display: flex;
     justify-content: center;
 }
 .hero-image img{
-    max-width: 100%; 
-    height: auto; 
+    max-width: 100%;
+    height: auto;
     border-radius: 10px;
 }
 .hero-features{
-    display: flex; 
+    display: flex;
     justify-content: space-around;
-    padding: 60px 40px; 
+    padding: 60px 40px;
     background: #edf2f7;
     gap: 30px;
 }
 .card{
-    background: #fff; 
-    padding: 25px; 
+    background: #fff;
+    padding: 25px;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1); 
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     text-align: center;
     flex: 1;
 }
 .card h3{
-    font-size: 22px; 
-    color: #063c75; 
+    font-size: 22px;
+    color: #063c75;
     margin-bottom: 15px;
 }
 .card p{
-    font-size: 16px; 
+    font-size: 16px;
     color: #0b3274;
 }
 .footer{
-    text-align: center; 
-    padding: 20px; 
-    background: #2d3748; 
+    text-align: center;
+    padding: 20px;
+    background: #2d3748;
     color: #fff;
 }
 .icons{
@@ -81,25 +81,142 @@ body{
     height: 80px;
     margin-bottom: 15px;
 }
+
+@media (max-width: 1024px) {
+    .hero {
+        padding: 100px 30px 60px;
+        gap: 30px;
+    }
+
+    .description h2 {
+        font-size: 36px;
+    }
+
+    .description p {
+        font-size: 16px;
+    }
+
+    .button {
+        padding: 10px 30px;
+        font-size: 16px;
+    }
+
+    .hero-features {
+        padding: 50px 30px;
+        gap: 20px;
+    }
+
+    .card {
+        padding: 20px;
+    }
+
+    .card h3 {
+        font-size: 20px;
+    }
+
+    .card p {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+        padding: 90px 20px 50px;
+        gap: 30px;
+        text-align: center;
+    }
+
+    .description h2 {
+        font-size: 32px;
+    }
+
+    .description p {
+        font-size: 16px;
+    }
+
+    .hero-features {
+        flex-direction: column;
+        padding: 40px 20px;
+        gap: 20px;
+    }
+
+    .card {
+        padding: 20px;
+        margin-bottom: 15px;
+    }
+
+    .icons {
+        width: 60px;
+        height: 60px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero {
+        padding: 80px 15px 40px;
+        gap: 20px;
+    }
+
+    .description h2 {
+        font-size: 28px;
+        margin-bottom: 15px;
+    }
+
+    .description p {
+        font-size: 15px;
+        margin-bottom: 25px;
+    }
+
+    .button {
+        padding: 10px 25px;
+        font-size: 15px;
+        width: 100%;
+        max-width: 200px;
+    }
+
+    .hero-features {
+        padding: 30px 15px;
+    }
+
+    .card {
+        padding: 18px;
+    }
+
+    .card h3 {
+        font-size: 18px;
+        margin-bottom: 12px;
+    }
+
+    .card p {
+        font-size: 14px;
+    }
+
+    .icons {
+        width: 50px;
+        height: 50px;
+        margin-bottom: 12px;
+    }
+}
 .feedback {
     background-color: #f9fafb;
     padding: 60px 40px;
     text-align: center;
   }
-  
+
   .feedback-title {
     font-size: 32px;
     margin-bottom: 40px;
     color: #063c75;
   }
-  
+
   .feedback-cards {
     display: flex;
     flex-wrap: wrap;
     gap: 30px;
     justify-content: center;
   }
-  
+
   .feedback-card {
     background: #ffffff;
     padding: 30px 20px;
@@ -109,11 +226,11 @@ body{
     flex: 1;
     transition: transform 0.3s ease;
   }
-  
+
   .feedback-card:hover {
     transform: translateY(-5px);
   }
-  
+
   .feedback-avatar {
     width: 70px;
     height: 70px;
@@ -121,16 +238,94 @@ body{
     margin-bottom: 15px;
     object-fit: cover;
   }
-  
+
   .feedback-card p {
     font-size: 16px;
     color: #0b3274;
     margin-bottom: 10px;
   }
-  
+
   .feedback-card span {
     font-weight: 600;
     color: #2d3748;
   }
+
+@media (max-width: 1024px) {
+    .feedback {
+        padding: 50px 30px;
+    }
+
+    .feedback-title {
+        font-size: 28px;
+        margin-bottom: 30px;
+    }
+
+    .feedback-cards {
+        gap: 20px;
+    }
+
+    .feedback-card {
+        padding: 25px 18px;
+        max-width: 280px;
+    }
+
+    .feedback-avatar {
+        width: 60px;
+        height: 60px;
+    }
+
+    .feedback-card p {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 768px) {
+    .feedback {
+        padding: 40px 20px;
+    }
+
+    .feedback-title {
+        font-size: 26px;
+        margin-bottom: 25px;
+    }
+
+    .feedback-cards {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .feedback-card {
+        max-width: 100%;
+        width: 100%;
+        padding: 25px 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .feedback {
+        padding: 30px 15px;
+    }
+
+    .feedback-title {
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+
+    .feedback-card {
+        padding: 20px 15px;
+    }
+
+    .feedback-avatar {
+        width: 50px;
+        height: 50px;
+        margin-bottom: 12px;
+    }
+
+    .feedback-card p {
+        font-size: 14px;
+        margin-bottom: 8px;
+    }
+}
   
   
